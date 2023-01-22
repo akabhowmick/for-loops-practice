@@ -4,7 +4,19 @@
 // getAllWithdrawals(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllWithdrawals(array) {
-  // Your code goes here...
+  let withdrawals = [];
+  for (let index = 0; index < array.length; index++) {
+    if('withdrawals' in array[index]){
+      let subtotal = 0; 
+      for (let i = 0; i < array[index].withdrawals.length; i++) {
+        subtotal+= array[index].withdrawals[i];
+      }
+      withdrawals.push(subtotal);
+    } else {
+      withdrawals.push(0);
+    }
+  }
+  return withdrawals; 
 
 }
 

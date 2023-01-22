@@ -5,8 +5,11 @@
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
 export function getAllClientNames(array) {
-  // Your code goes here...
-
+  let clientNames = [];
+  for (let index = 0; index < array.length; index++) {
+    clientNames.push(array[index].name);
+  }
+  return clientNames; 
 }
 
 

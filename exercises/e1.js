@@ -4,8 +4,11 @@
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
 export function getFirstTenNumbers() {
-  // Your code goes here...
-
+  let firstNumbers = [];
+  for (let index = 1; index <= 10; index++) {
+    firstNumbers.push(index)
+  };
+  return firstNumbers;
 }
 
 // === TEST YOURSELF ===
